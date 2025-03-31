@@ -8,7 +8,6 @@ export async function POST(request: Request) {
     if (!nombre || !fecha_inicio || !fecha_fin || !gerente_id) {
         return NextResponse.json({ message: 'Todos los campos excepto descripción son obligatorios' }, { status: 400, headers: { 'Access-Control-Allow-Origin': '*' } });
     }
-
     try {
         const pool = await getConnection();
         const result = await pool.request()
