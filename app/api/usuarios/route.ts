@@ -63,7 +63,6 @@ export async function PUT(req: Request) {
     if (!id || !nombre_usuario || !contrasena || !rol_id) {
       return NextResponse.json({ message: 'Todos los campos son obligatorios' }, { status: 400, headers: { 'Access-Control-Allow-Origin': '*' } });
     }
-
     const connection = await getConnection();
 
     // Verificar si el rol existe

@@ -19,6 +19,5 @@ export function middleware(request: Request) {
             },
         });
     }
-
     return response;
 }
