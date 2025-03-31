@@ -14,3 +14,11 @@ Miembro del Equipo: Accede a proyectos y tareas asignadas, actualiza el estado d
 Gestión de Proyectos: Los usuarios pueden crear, editar y eliminar proyectos, así como añadir, editar y eliminar tareas dentro de cada proyecto.
 
 Integración con API REST: La aplicación se comunica con un backend mediante servicios API, utilizando react-query para gestionar el estado de las solicitudes a la API.
+
+Alumnos:  
+David Alberto Valles Gómez - VG240553 
+Melvin Alexander Soriano Quijada - SQ242789
+Herbert William Solano Vásquez - SV202844
+Jonathan Jose Flamenco Lopez FL161275
+Raquel abigail Cortez Mata CM162199
+
