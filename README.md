@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Descripción del Sistema de Gestión de Proyectos
 
-## Getting Started
+El sistema de gestión de proyectos es una aplicación web desarrollada con React y Next.js que permite a los usuarios registrarse, iniciar sesión y gestionar proyectos y tareas. La aplicación interactúa con una API REST para almacenar y recuperar datos, asegurando que la información esté siempre actualizada y accesible.
 
-First, run the development server:
+Características principales:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Autenticación de Usuarios: Los usuarios pueden registrarse y acceder a la aplicación mediante un sistema de autenticación seguro. Las rutas privadas están protegidas y solo son accesibles para usuarios autenticados.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Roles de Usuario:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Administrador del Sistema: Gestiona usuarios, configura permisos y roles, supervisa la actividad del sistema y realiza mantenimiento.
+Gerente de Proyectos: Crea y gestiona proyectos, asigna tareas, supervisa el progreso y se comunica con los clientes.
+Miembro del Equipo: Accede a proyectos y tareas asignadas, actualiza el estado de las tareas y colabora con otros miembros del equipo.
+Gestión de Proyectos: Los usuarios pueden crear, editar y eliminar proyectos, así como añadir, editar y eliminar tareas dentro de cada proyecto.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Integración con API REST: La aplicación se comunica con un backend mediante servicios API, utilizando react-query para gestionar el estado de las solicitudes a la API.
 
-## Learn More
+Alumnos:  
+David Alberto Valles Gómez - VG240553 
+Melvin Alexander Soriano Quijada - SQ242789
+Herbert William Solano Vásquez - SV202844
+Jonathan Jose Flamenco Lopez FL161275
+Raquel abigail Cortez Mata CM162199
 
-To learn more about Next.js, take a look at the following resources:
+Video:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+https://udbedu-my.sharepoint.com/:v:/g/personal/cm162199_alumno_udb_edu_sv/EaSKdqwkQ7ZNocZQxqJq-_cBbdo_BQxTfWJ-vw2GF4rABQ?e=u0P1ZN&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
