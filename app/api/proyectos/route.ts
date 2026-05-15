@@ -6,7 +6,7 @@ export async function POST(request: Request) {
     const { nombre, descripcion, fecha_inicio, fecha_fin, gerente_id } = await request.json();
     
     if (!nombre || !fecha_inicio || !fecha_fin || !gerente_id) {
-        return NextResponse.json({ message: 'Todos los campos excepto descripción son obligatorios' }, { status: 400, headers: { 'Access-Control-Allow-Origin': '*' } });
+        return NextResponse.json({ message: 'Todos los campos excepto descripción son obligatorios' }, { status: 400 });
     }
     try {
         const pool = await getConnection();
@@ -20,7 +20,7 @@ export async function POST(request: Request) {
                     VALUES (@nombre, @descripcion, @fecha_inicio, @fecha_fin, @gerente_id)`);
         return NextResponse.json({ message: 'Proyecto creado con éxito' }, { headers: { 'Access-Control-Allow-Origin': '*' } });
     } catch (error) {
-        return NextResponse.json({ message: 'Error al crear el proyecto' }, { status: 500, headers: { 'Access-Control-Allow-Origin': '*' } });
+        return NextResponse.json({ message: 'Error al crear el proyecto' }, { status: 500 });
     }
 }
 
@@ -30,7 +30,7 @@ export async function GET() {
         const result = await pool.request().query(`SELECT * FROM Proyectos`);
         return NextResponse.json(result.recordset, { headers: { 'Access-Control-Allow-Origin': '*' } });
     } catch (error) {
-        return NextResponse.json({ message: 'Error al obtener los proyectos' }, { status: 500, headers: { 'Access-Control-Allow-Origin': '*' } });
+        return NextResponse.json({ message: 'Error al obtener los proyectos' }, { status: 500 });
     }
 }
 
@@ -38,11 +38,11 @@ export async function PATCH(request: Request) {
     const { id, nombre, descripcion, fecha_inicio, fecha_fin, gerente_id } = await request.json();
 
     if (!id) {
-        return NextResponse.json({ message: 'ID del proyecto es obligatorio' }, { status: 400, headers: { 'Access-Control-Allow-Origin': '*' } });
+        return NextResponse.json({ message: 'ID del proyecto es obligatorio' }, { status: 400 });
     }
 
     if (!gerente_id) {
-        return NextResponse.json({ message: 'ID del usuario a asignar es obligatorio' }, { status: 400, headers: { 'Access-Control-Allow-Origin': '*' } });
+        return NextResponse.json({ message: 'ID del usuario a asignar es obligatorio' }, { status: 400 });
     }
 
     try {
@@ -58,6 +58,6 @@ export async function PATCH(request: Request) {
                     fecha_fin = @fecha_fin, gerente_id = @gerente_id WHERE id = @id`);
         return NextResponse.json({ message: 'Proyecto actualizado con éxito' }, { headers: { 'Access-Control-Allow-Origin': '*' } });
     } catch (error) {
-        return NextResponse.json({ message: 'Error al actualizar el proyecto' }, { status: 500, headers: { 'Access-Control-Allow-Origin': '*' } });
+        return NextResponse.json({ message: 'Error al actualizar el proyecto' }, { status: 500 });
     }
 }
