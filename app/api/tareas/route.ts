@@ -6,7 +6,7 @@ export async function POST(request: Request) {
     const { nombre, descripcion, estado, proyecto_id, asignado_a } = await request.json();
 
     if (!nombre || !estado || !proyecto_id || !asignado_a) {
-        return NextResponse.json({ error: 'Faltan campos obligatorios' }, { status: 400, headers: { 'Access-Control-Allow-Origin': '*' } });
+        return NextResponse.json({ error: 'Faltan campos obligatorios' }, { status: 400 });
     }
 
     const db = await getConnection();
